@@ -5,6 +5,10 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  div 
+    p 
+      a(href="/new") Create a Post
   
   div 
     each message in messages

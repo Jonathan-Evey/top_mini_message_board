@@ -1,6 +1,12 @@
 extends layout
 
 block content
-    <form method="POST" action="/new">
-        <p aria-hidden="true"> put your inputs and buttons in here! </p>
-    </form>
+    div(class="form container")
+        <form method="POST" action="/new" class="form post-message">
+            p Compose your post
+            label(for="userName") Name
+            input(type="text", name="userName", placeholder="Enter a display name") 
+            label(for="postText") Message:
+            <textarea placeholder="Enter you message here" name="postText" cols="30" rows="10"></textarea>
+            button(type="submit") Make Post
+        </form>
